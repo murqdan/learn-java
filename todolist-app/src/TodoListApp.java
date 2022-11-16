@@ -2,7 +2,7 @@ public class TodoListApp {
     public static String[] model = new String[10];
 
     public static void main(String[] args) {
-        testAddTodoList();
+        testRemoveTodoList();
     }
 
     // Model
@@ -67,9 +67,34 @@ public class TodoListApp {
         } else if (model[number - 1] == null) {
             return false;
         } else {
-            model[number - 1] = null;
+            for (int i = number - 1; i < model.length; i++) {
+                if (i == model.length - 1) {
+                    model[i] = null;
+                } else {
+                    model[i] = model[i + 1];
+                }
+            }
             return true;
         }
+    }
+
+    public static void testRemoveTodoList() {
+        addTodoList("satu");
+        addTodoList("dua");
+        addTodoList("tiga");
+        addTodoList("empat");
+        addTodoList("lima");
+
+        var result = removeTodoList(20);
+        System.out.println(result);
+
+        result = removeTodoList(7);
+        System.out.println(result);
+
+        result = removeTodoList(2);
+        System.out.println(result);
+
+        showTodoList();
     }
 
     // View
