@@ -2,7 +2,7 @@ public class TodoListApp {
     public static String[] model = new String[10];
 
     public static void main(String[] args) {
-        testShowTodoList();
+        testAddTodoList();
     }
 
     // Model
@@ -51,6 +51,14 @@ public class TodoListApp {
                 break;
             }
         }
+    }
+
+    public static void testAddTodoList() {
+        for (int i = 1; i <= 25; i++) {
+            addTodoList("Todo-" + i);
+        }
+
+        showTodoList();
     }
 
     public static void removeTodoList() {
