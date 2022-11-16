@@ -117,7 +117,26 @@ public class TodoListApp {
     // View
 
     public static void viewShowTodoList() {
+        while (true) {
+            showTodoList();
 
+            System.out.println("MENU : ");
+            System.out.println("1. Tambah");
+            System.out.println("2. Hapus");
+            System.out.println("3. Keluar");
+
+            var input = input("Pilih");
+
+            if (input.equals("1")) {
+                viewAddTodoList();
+            } else if (input.equals("2")) {
+                viewRemoveTodoList();
+            } else if (input.equals("x")) {
+                break;
+            } else {
+                System.out.println("Wrong input");
+            }
+        }
     }
 
     public static void viewAddTodoList() {
