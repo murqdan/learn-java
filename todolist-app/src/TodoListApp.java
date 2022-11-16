@@ -61,8 +61,15 @@ public class TodoListApp {
         showTodoList();
     }
 
-    public static void removeTodoList() {
-
+    public static boolean removeTodoList(Integer number) {
+        if(number - 1 >= model.length) {
+            return false;
+        } else if (model[number - 1] == null) {
+            return false;
+        } else {
+            model[number - 1] = null;
+            return true;
+        }
     }
 
     // View
