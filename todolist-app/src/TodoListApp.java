@@ -24,8 +24,33 @@ public class TodoListApp {
         showTodoList();
     }
 
-    public static void addTodoList() {
+    public static void addTodoList(String todo) {
+        // is the model full?
+        var isFull = true;
+        for (int i = 0; i < model.length; i++) {
+            if (model[i] == null) {
+                isFull = false;
+                break;
+            }
+        }
 
+        // if full, resize array
+        if (isFull) {
+            var temp = model;
+            model = new String[model.length * 2];
+
+            for (int i = 0; i < temp.length; i++) {
+                model[i] = temp[i];
+            }
+        }
+
+        // add it to the position where the data array is null
+        for (var i = 0; i < model.length; i++) {
+            if (model[i] == null) {
+                model[i] = todo;
+                break;
+            }
+        }
     }
 
     public static void removeTodoList() {
