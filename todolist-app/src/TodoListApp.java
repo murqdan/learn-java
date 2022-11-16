@@ -4,7 +4,7 @@ public class TodoListApp {
     public static java.util.Scanner scanner = new java.util.Scanner(System.in);
 
     public static void main(String[] args) {
-        testInput();
+        testViewShowTodoList();
     }
 
     // Model
@@ -118,6 +118,7 @@ public class TodoListApp {
 
     public static void viewShowTodoList() {
         while (true) {
+            System.out.println("TODOLIST");
             showTodoList();
 
             System.out.println("MENU : ");
@@ -131,12 +132,19 @@ public class TodoListApp {
                 viewAddTodoList();
             } else if (input.equals("2")) {
                 viewRemoveTodoList();
-            } else if (input.equals("x")) {
+            } else if (input.equals("3")) {
                 break;
             } else {
                 System.out.println("Wrong input");
             }
         }
+    }
+
+    public static void testViewShowTodoList() {
+        addTodoList("Madang");
+        addTodoList("Ngising");
+        addTodoList("Turu");
+        viewShowTodoList();
     }
 
     public static void viewAddTodoList() {
