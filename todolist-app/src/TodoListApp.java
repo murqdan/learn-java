@@ -123,11 +123,11 @@ public class TodoListApp {
             showTodoList();
 
             System.out.println("MENU : ");
-            System.out.println("1. Tambah");
-            System.out.println("2. Hapus");
-            System.out.println("3. Keluar");
+            System.out.println("1. Add");
+            System.out.println("2. Remove");
+            System.out.println("3. Exit");
 
-            var input = input("Pilih");
+            var input = input("Choose");
 
             if (input.equals("1")) {
                 viewAddTodoList();
@@ -149,9 +149,9 @@ public class TodoListApp {
     }
 
     public static void viewAddTodoList() {
-        System.out.println("MENAMBAH TODOLIST");
+        System.out.println("ADD TODOLIST");
 
-        var todo = input("Todo (x Jika Batal)");
+        var todo = input("Todo (x to cancel)");
 
         if (todo.equals("x")) {
 
@@ -167,19 +167,26 @@ public class TodoListApp {
     }
 
     public static void viewRemoveTodoList() {
-        System.out.println("MENGHAPUS TODOLIST");
+        System.out.println("REMOVE TODOLIST");
 
-        var number = input("Nomor yang dihapus (x Jika Batal)");
+        var number = input("Deleted Number (x to cancel)");
 
         if (number.equals("x")) {
             // batal
         } else {
             boolean success = removeTodoList(Integer.valueOf(number));
             if (!success) {
-                System.out.println("Gagal menghapus todolist nomor : " + number);
+                System.out.println("Failed to delete : " + number);
             }
         }
     }
 
+    public static void testViewRemoveTodoList() {
+        addTodoList("Madang");
+        addTodoList("Ngising");
+        addTodoList("Turu");
 
+        viewRemoveTodoList();
+        showTodoList();
+    }
 }
