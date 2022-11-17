@@ -4,7 +4,7 @@ public class TodoListApp {
     public static java.util.Scanner scanner = new java.util.Scanner(System.in);
 
     public static void main(String[] args) {
-        testViewShowTodoList();
+        viewShowTodoList();
     }
 
     // Model
@@ -98,6 +98,7 @@ public class TodoListApp {
 
         showTodoList();
     }
+
     // input
 
     public static String input(String info) {
@@ -157,6 +158,12 @@ public class TodoListApp {
         } else {
             addTodoList(todo);
         }
+    }
+
+    public static void testViewAddTodoList() {
+        viewAddTodoList();
+
+        showTodoList();
     }
 
     public static void viewRemoveTodoList() {
