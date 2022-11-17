@@ -148,7 +148,15 @@ public class TodoListApp {
     }
 
     public static void viewAddTodoList() {
+        System.out.println("MENAMBAH TODOLIST");
 
+        var todo = input("Todo (x Jika Batal)");
+
+        if (todo.equals("x")) {
+
+        } else {
+            addTodoList(todo);
+        }
     }
 
     public static void viewRemoveTodoList() {
