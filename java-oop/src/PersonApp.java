@@ -8,9 +8,9 @@ public class PersonApp {
 
         person1.sayHello("Budi");
 
-        Person person2 = new Person("Joko", "Sleman");
+        Person person2 = new Person("Joko");
 
         Person person3;
-        person3 = new Person("Isa", "Sleman");
+        person3 = new Person();
     }
 }
