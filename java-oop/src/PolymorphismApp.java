@@ -24,8 +24,5 @@ public class PolymorphismApp {
         } else {
             System.out.println("Hello " + employee.name);
         }
-
-        System.out.println("I'm " + employee.name);
-
     }
 }
