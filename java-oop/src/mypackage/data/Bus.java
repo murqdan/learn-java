@@ -1,16 +1,16 @@
 package mypackage.data;
 
-public class Avanza implements Car {
+public class Bus implements Car{
     public void drive() {
-        System.out.println("Avanza drive");
+        System.out.println("Bus drive");
     }
 
     public int getTier() {
-        return 3;
+        return 6;
     }
 
     public String getBrand() {
-        return "Toyota";
+        return "HINO";
     }
 
     public boolean isMaintenance() {
@@ -18,6 +18,6 @@ public class Avanza implements Car {
     }
 
     public boolean isBig() {
-        return false;
+        return true;
     }
 }
