@@ -1,12 +1,12 @@
 package mypackage.app;
 
-import mypackage.data.Tesla;
+import mypackage.data.Avanza;
 
 public class CarApp {
     public static void main(String[] args) {
-        Tesla tesla = new Tesla();
+        Avanza avanza = new Avanza();
 
-        tesla.drive();
-        System.out.println(tesla.getTier());
+        avanza.drive();
+        System.out.println(avanza.getTier());
     }
 }
