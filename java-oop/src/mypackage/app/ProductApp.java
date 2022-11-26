@@ -9,6 +9,8 @@ public class ProductApp {
         System.out.println(product.price);
         System.out.println(product);
 
-        Data data = new Data();
+        Product product2 = new Product("Mac Book Pro", 30_000_000);
+
+        System.out.println(product.equals(product2));
     }
 }
