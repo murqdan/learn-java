@@ -4,10 +4,14 @@ public class SocialMedia {
     String name;
 }
 
-final class FaceBook extends SocialMedia {
+class FaceBook extends SocialMedia {
+    final void login(String username, String password) {
 
+    }
 }
 
-//class FakeFacebook extends FaceBook {
+class FakeFacebook extends FaceBook {
+//    void login(String username, String password) {
 //
-//}
+//    }
+}
