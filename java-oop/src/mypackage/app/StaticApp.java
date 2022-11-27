@@ -1,14 +1,14 @@
 package mypackage.app;
 
-import mypackage.data.Application;
-import mypackage.data.Constant;
+import static mypackage.data.Application.PROCESSORS;
+import static mypackage.data.Constant.*;
 import mypackage.data.Country;
 import mypackage.util.MathUtil;
 
 public class StaticApp {
     public static void main(String[] args) {
-        System.out.println(Constant.APPLICATION);
-        System.out.println(Constant.VERSION);
+        System.out.println(APPLICATION);
+        System.out.println(VERSION);
 
         System.out.println(
                 MathUtil.sum(1,1,1,1,1)
@@ -19,6 +19,6 @@ public class StaticApp {
         city.setName("Yogyakarta");
         System.out.println(city.getName());
 
-        System.out.println(Application.PROCESSORS);
+        System.out.println(PROCESSORS);
     }
 }
