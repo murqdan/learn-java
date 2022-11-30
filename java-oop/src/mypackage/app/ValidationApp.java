@@ -18,5 +18,9 @@ public class ValidationApp {
         } finally {
             System.out.println("Selalu dieksekusi");
         }
+
+        LoginRequest loginRequest2 = new LoginRequest(null, null);
+        ValidationUtil.ValidateRuntime(loginRequest2);
+        System.out.println("Sukses");
     }
 }
